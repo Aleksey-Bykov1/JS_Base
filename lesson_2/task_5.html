@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>task_5</title>
+</head>
+<body>
+
+<script>
+  'use strict'
+
+  /**
+   * Функция сложения.
+   * @param {number} a первое число для сложения
+   * @param {number} b второе число для сложения
+   * @returns {number} вернет число в результате сложения двух числел в функции
+   */
+  function addition(a, b) {
+    return a + b;
+  }
+
+  /**
+   * Фунция вычитания.
+   * @param {number} a число из которого будут вычитать
+   * @param {number} b число которое будут вычитать
+   * @returns {number} вернет число в результате вычитания в функции
+   */
+  function subtraction(a, b) {
+    return a - b;
+  }
+
+  /**
+   * Функция деления.
+   * @param {number} a число которое будут делить
+   * @param {number} b число на которое будут делить
+   * @returns {number} вернет число результат деления в функции
+   */
+  function division(a, b) {
+    return a / b;
+  }
+
+  /**
+   * Функция умножения.
+   * @param {number} a первое число для умножения
+   * @param {number} b второе число для умножения
+   * @returns {number} вернет число в результате умножения двух числел в функции
+   */
+  function multiplication(a, b) {
+    return a * b;
+  }
+
+  /**
+   * Функция математических вычислений.
+   * @param {number} arg1 первое число для функции
+   * @param {number} arg2 второе число для функции
+   * @param {string} operation символ желаемой операции (+ , - , / , * )
+   */
+  function mathOperation(arg1, arg2, operation) {
+    switch (operation) {
+      case '+':
+        return alert(addition('Результат сложения: ', arg1, arg2));
+      case '-':
+        return alert(subtraction('Результат вычитания: ', arg1, arg2));
+      case '/':
+        return alert(division('Результат деления: ', arg1, arg2));
+      case '*':
+        return alert(multiplication('Результат умножения: ', arg1, arg2));
+      default:
+        alert('Введены НЕ верные значения');
+    }
+  }
+
+  let arg1 = Number(prompt('Введите первое число: '));
+  let arg2 = Number(prompt('Введите второе число: '));
+  let operation = prompt('Введите знак желаемой операции (+ , - , / , * ): ');
+  mathOperation(arg1, arg2, operation);
+
+</script>
+
+</body>
+</html>
