@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>task_6</title>
+</head>
+<body>
+
+<script>
+  'use strict';
+
+  /**
+   * Функция выдачи сообщения о зачислении депозита.
+   * @param {number} num число для зачисления на счет
+   * на выходе просто выдача сообщения без записи результата
+   */
+  function showDeposit (num) {
+    let result = num % 10;
+    switch (result) {
+      case 1:
+        alert(`Ваша сумма в ${num} рубль успешно зачислена.`);
+        break;
+      case 2:
+      case 3:
+      case 4:
+        alert(`Ваша сумма в ${num} рубля успешно зачислена.`);
+        break;
+      case 0:
+      case 5:
+      case 6:
+      case 7:
+      case 8:
+      case 9:
+        alert(`Ваша сумма в ${num} рублей успешно зачислена.`);
+        break;
+      default:
+        alert('Не верные данные ввода, попробуйте еще раз.');
+    }
+  }
+
+  showDeposit(+prompt('Введите сумму вклада: '));
+
+</script>
+
+</body>
+</html>
