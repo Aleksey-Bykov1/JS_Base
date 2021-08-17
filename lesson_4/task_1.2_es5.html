@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>task_1.2_es5</title>
+</head>
+<body>
+
+<script>
+  'use strict'
+
+  function Post(author, text, data) {
+    this.author = author;
+    this.text = text;
+    this.data = data;
+  }
+
+  Post.prototype.edit = function (textEdit) {
+    this.text = textEdit;
+  }
+
+  function AttachedPost(author, text, data, highlighted) {
+    Post.call(this, author, text, data);
+    this.highlighted = false;
+  }
+
+  AttachedPost.prototype = Object.create(Post.prototype);
+  AttachedPost.prototype.constructor = AttachedPost;
+
+  AttachedPost.prototype.makeTextHighlighted = function () {
+    this.highlighted = true;
+  }
+
+  let post1 = new Post('Alex', 'Hello', '12.12.2020');
+  console.log(post1);
+  post1.edit('Bye')
+  console.log(post1);
+  let post2 = new AttachedPost('Lena', 'hi', '21.21.2020');
+  console.log(post2);
+  post2.makeTextHighlighted();
+  console.log(post2);
+
+
+</script>
+
+</body>
+</html>
